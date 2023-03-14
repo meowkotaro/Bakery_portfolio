@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* CSS Document */
+/* CSS Document */
+/* CSS Document */
+/*index.htmlここまで*/
+/*menu.html*/
+/*menu.htmlここまで*/
+/*news.html*/
+/*news.htmlここまで*/
+.header {
+  height: 100px; }
+
+.menu-lineup {
+  margin: 50px auto; }
+  .menu-lineup__text {
+    text-align: center;
+    margin-bottom: 40px; }
+  .menu-lineup__best3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    border-radius: 20px;
+    background-color: #988E79; }
+    .menu-lineup__best3 .best3-text {
+      background-image: url(../img/SVG/best3_logo.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100px;
+      height: 100px;
+      border-radius: 20px 20px 5px 5px; }
+      .menu-lineup__best3 .best3-text__area {
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%); }
+  .menu-lineup__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 50px;
+    text-align: center; }
+    .menu-lineup__item h3 {
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #4D390F; }
+  .menu-lineup__img {
+    width: 80%;
+    margin: 0 auto; }
+  .menu-lineup__icon {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    left: 10px;
+    top: -10%; }
+    .menu-lineup__icon.no1 {
+      width: 30%;
+      height: 30%;
+      top: -15%;
+      transform-origin: 50% 75%;
+      transform: rotate(-30deg); }
+  .menu-lineup__other {
+    margin: 100px auto;
+    width: 80%; }
+    .menu-lineup__other h2 {
+      font-weight: 500;
+      text-align: center; }
+  .menu-lineup__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 0; }
+    .menu-lineup__wrap .bread-img {
+      width: 45%;
+      text-align: center;
+      margin-bottom: 30px; }
+      .menu-lineup__wrap .bread-img:last-child {
+        margin-bottom: 0; }
+      .menu-lineup__wrap .bread-img img {
+        width: 100%; }
+      .menu-lineup__wrap .bread-img p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 5px; }
+
+/*イートイン*/
+.eatin {
+  margin: 0px auto;
+  width: 80%; }
+  .eatin__text {
+    text-align: center; }
+  .eatin__area {
+    margin-top: 30px; }
+  .eatin__list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px; }
+    .eatin__list:last-child {
+      margin-bottom: 0; }
+  .eatin p, .eatin ul, .eatin div {
+    padding-left: 5%; }
+  .eatin__text p {
+    padding-left: 0; }
+  .eatin__area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-left: 3px solid #B08323; }
+  .eatin__menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .eatin__menu p {
+      width: 50%; }
+      .eatin__menu p:first-child {
+        text-align: center;
+        font-weight: 600; }
+    .eatin__menu-area {
+      width: 100%; }
+    .eatin__menu-text {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #4D390F; }
+  .eatin__hours {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .eatin__hours p {
+      width: 50%; }
+      .eatin__hours p:first-child {
+        text-align: center;
+        font-weight: 600; }
+    .eatin__hours-area {
+      width: 100%; }
+    .eatin__hours-text {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #4D390F; }
+  .eatin__img {
+    background-image: url(../img/eatin_img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+    height: 150px;
+    margin-top: 20px;
+    align-self: flex-end; }
+
+/*イートイン*/
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.4rem; }
+
+  .menu-lineup {
+    margin: 0 auto;
+    padding-top: 50px; }
+    .menu-lineup__best3 {
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+    .menu-lineup__item {
+      width: 30%;
+      align-self: stretch; }
+      .menu-lineup__item p {
+        width: 75%; }
+    .menu-lineup__wrap .bread-img {
+      width: 30%;
+      text-align: center; }
+      .menu-lineup__wrap .bread-img img {
+        width: 100%; }
+      .menu-lineup__wrap .bread-img p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 5px; }
+
+  .eatin {
+    width: 90%; }
+    .eatin__area {
+      flex-wrap: wrap;
+      height: 300px; }
+    .eatin__menu-area {
+      width: 60%; }
+    .eatin__hours-area {
+      width: 60%; }
+    .eatin__img {
+      align-self: flex-start;
+      flex-grow: 3;
+      width: 300px;
+      height: 200px; } }

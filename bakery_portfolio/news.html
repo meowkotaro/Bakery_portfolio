@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>お知らせ　ベーカリーヤマグチ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@500&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/calendar.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/news.css">
+  
+</head>
+
+
+<body id="index">
+  <div class="humburger radius">
+    <div class="menu-border">
+      <span class="menu-border__item radius"></span>
+      <span class="menu-border__item radius"></span>
+      <span class="menu-border__item radius"></span>
+    </div>
+  </div>
+  <div class="nav-area">
+      <nav class="nav-area__main radius">
+        <div class="nav-area__logo">
+        </div>
+        <ul class="menu-list">
+          <li class="menu-list__item">
+              <a href="menu.html"><h2>MENU LINE UP</h2>
+              <p>メニュー一覧</p></a>
+          </li>
+          <li class="menu-list__item">
+            <a href="about.html"><h2>ABOUT</h2>
+            <p>お店について</p></a>
+          </li>
+          <li class="menu-list__item">
+            <a href="news.html"><h2>NEWS</h2>
+            <p>お知らせ</p></a>
+          </li>
+          <li class="menu-list__item">
+            <a  href="#info"><h2>SHOP INFO</h2>
+            <p>店舗情報</p></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  
+  <div id="container">
+    <header id="top" class="header">
+      <div class="header__area">
+        <div class="logo radius">
+          <a href="index.html"><!--<img src="img/SVG/logo.svg" alt="ベーカリーヤマグチ">--></a>
+        </div>
+        
+        <nav>
+        <ul class="menu-list">
+          <li class="menu-list__item">
+              <a href="menu.html"><h2>MENU LINE UP</h2>
+              <p>メニュー一覧</p></a>
+          </li>
+          <li class="menu-list__item">
+            <a href="about.html"><h2>ABOUT</h2>
+            <p>お店について</p></a>
+          </li>
+          <li class="menu-list__item">
+            <a href="news.html"><h2>NEWS</h2>
+            <p>お知らせ</p></a>
+          </li>
+          <li class="menu-list__item">
+            <a  href="#info"><h2>SHOP INFO</h2>
+            <p>店舗情報</p></a>
+          </li>
+        </ul>
+      </nav>
+      </div>
+    </header>
+    <!--ヘッダーここまで-->
+    <div id="main">
+    <!--ニュースエリア-->
+      <div class="news-page">
+        <div class="news-page__text">
+          <h2>NEWS</h2>
+          <p>お知らせ一覧</p>
+        </div>
+        <div class="news-page__area">
+          <ul class="news-page__item">
+            <li class="news-page__img">
+              <img src="img/maracake.jpg" alt="マーラーカオ">
+            </li>
+            <li class="news-page__date">
+              <time datetime="2023-3-8">2023/3/8</time>
+            </li>
+            <li class="news-page__title">
+              <h2>期間限定商品のご案内</h2>
+            </li>
+            <li class="news-page__content">
+              <p>期間限定商品としてマーラーカオが登場しました。ぜひご賞味ください。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--ニュースエリア-->
+
+      <!--店舗情報-->
+        <div id="info" class="access">
+          <div class="access__text">
+            <h2>ACCESS</h2>
+            <p>店舗情報</p>
+          </div>
+          <div class="access__flex">
+            <div class="access__area">
+              <ul class="access__list">
+                <li class="access__item shop-name">
+                  <h2>ベーカリーヤマグチ</h2>
+                </li>
+                <li class="access__item">
+                  <p>住所</p>
+                  <p>〒963-8861<br>
+                    福島県郡山市鶴見坦1-14-5</p>
+                </li>
+                <li class="access__item">
+                  <p>TEL</p>
+                  <p>024-000-0000</p>
+                </li>
+                <li class="access__item">
+                  <p>E-MAIL</p>
+                  <p>b-yamaguchi@nk.xx.jp</p>
+                </li>
+                <li class="access__item">
+                  <p>営業時間</p>
+                  <p>8:00～19:00</p>
+                </li>
+                <li class="access__item">
+                  <p>定休日</p>
+                  <p>日曜日</p>
+                </li>
+                <li class="access__item">
+                  <p>駐車場</p>
+                  <p>５台有</p>
+                </li>
+                <li class="access__item uber-icon">
+                  <a href="#"></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="wrapper">
+            <!-- xxxx年xx月を表示 -->
+              <h1 id="header"></h1>
+
+              <!-- ボタンクリックで月移動 -->
+              <div id="next-prev-button">
+                  <button id="prev" onclick="prev()">‹</button>
+                  <button id="next" onclick="next()">›</button>
+              </div>
+
+              <!-- カレンダー -->
+              <div id="calendar"></div>
+
+              <div class="closing-day">
+                <span></span>
+                <p>定休日</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="access__map">
+            <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15077.791841807717!2d140.36152680321027!3d37.3965620646556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60206cbbe8025b95%3A0xc6d33c9845fe05be!2z44CSOTYzLTg4NjEg56aP5bO255yM6YOh5bGx5biC6ba06KaL5Z2m77yR5LiB55uu77yR77yU4oiS77yVIOWGheiXpOODk-ODqw!5e0!3m2!1sja!2sjp!4v1677559585548!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div> 
+        </div>
+      </div>
+      <!--店舗情報ここまで-->
+    </div>
+    
+    
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer__area">
+        <a href="#top">
+          <div class="footer__logo">
+          </div>
+        </a>
+        <p class="footer__text">
+          copyright&copy;
+          ベーカリーヤマグチ
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- フッターここまで-->
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

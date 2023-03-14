@@ -1,0 +1,255 @@
+/* CSS Document */
+@mixin index(){
+  p {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+  
+  #about, #news, #info, #img{
+  padding-top: 100px;
+  }
+  
+  .header {
+    &__area {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+    nav {
+      order: 2;
+      display: block;
+      width: 600px;
+      .menu-list {
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10%;
+        list-style-type: none;
+        &__item {
+          a {
+            text-align: center;
+            h2 {
+              font-size: 1.6rem;
+            }
+            h2,p {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .logo {
+      position: static;
+      align-self: center;
+      width: 70px;
+      height: 60px;
+      margin-left: 5%;
+      background: none;
+      transform: none;
+      h1 {
+        top: 5px;
+        left: 100px;
+      }
+    }
+  }
+  
+  .swiper-slide {
+    h2{
+      font-size: 2.4rem;
+    }
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  /*スマホ用ナビエリア*/
+  .humburger {
+        display: none;
+      }
+  .nav-area {
+    display: none;
+  }
+  /*スマホ用ナビエリア*/
+
+  #main {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /*イメージ画像エリアstart*/
+  .img {
+
+  }
+
+  .img-area {
+    display: flex;
+    flex-direction: row;
+  }
+  /*イメージ画像エリアend*/
+
+  /*お店についてstart*/
+  .about {;
+    width: 75%;
+
+    &__item {
+      margin-top: 100px;
+      p {
+        font-size: 1.6rem;
+      }
+
+      .about-img {
+        width: 300px;
+        height: 200px;
+        }
+      }
+    }
+  
+  /*お店についてend*/
+
+  /*newsエリア*/
+  .news {
+    &__area {
+      width: 75%;
+      margin: 50px auto 0;
+    }
+  }
+  /*newsエリア*/
+
+  /*店舗情報エリア*/
+  .access {
+    width: 100%;
+    &__flex {
+      display: flex;
+    }
+
+    &__area {
+      margin-top: 50px;
+      width: 60%;
+    }
+
+    &__list {
+      height: 400px;
+    }
+
+    &__item {
+      p {
+        font-size: 2rem;
+        &:last-child {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    &__map {
+      width: 75%;
+      .google-map {
+        height: 300px;;
+      }
+    }
+  }
+
+  .wrapper{
+    width: 40%;
+    margin: 50px auto;
+  }
+  /*店舗情報エリアここまで*/
+}
+/*index.htmlここまで*/
+
+/*menu.html*/
+@mixin menu(){
+  p {
+    font-size: 1.4rem;
+  }
+  
+  .menu-lineup{
+    margin: 0 auto;
+    padding-top: 50px;
+  
+  &__best3 {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 30%;
+    align-self: stretch;
+    p {
+      width: 75%;
+    }
+  }
+    
+  
+  &__wrap {
+    .bread-img {
+      width: 30%;
+      text-align: center;
+      img{
+        width: 100%;
+      }
+      p {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-top: 5px;
+        }
+      }
+    }
+  }
+  
+  .eatin {
+    width: 90%;
+    &__area {
+      flex-wrap: wrap;
+      height: 300px;
+    }
+    &__menu {
+      &-area {
+        width: 60%;
+      }
+    }
+    &__hours {
+      &-area {
+        width: 60%;
+      }
+    }
+    &__img {
+      align-self: flex-start;
+      flex-grow: 3;
+      width: 300px;
+      height: 200px;
+    }
+  }
+}
+/*menu.htmlここまで*/
+
+/*news.html*/
+@mixin news(){
+  .news-page {
+    &__img {
+      img {
+        width: 150px;
+        height: 150px;
+        padding-top: 0;
+      }
+    }
+    
+    &__content {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+/*news.htmlここまで*/

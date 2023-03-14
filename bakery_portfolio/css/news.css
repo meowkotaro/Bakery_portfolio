@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/* CSS Document */
+/* CSS Document */
+/* CSS Document */
+/*index.htmlここまで*/
+/*menu.html*/
+/*menu.htmlここまで*/
+/*news.html*/
+/*news.htmlここまで*/
+.header {
+  height: 100px; }
+
+.news-page {
+  margin: 100px auto;
+  width: 90%; }
+  .news-page__text {
+    text-align: center;
+    margin-bottom: 50px; }
+  .news-page__area {
+    margin-bottom: 50px; }
+    .news-page__area:last-child {
+      margin-bottom: 0; }
+  .news-page__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 150px; }
+  .news-page__img {
+    flex-basis: 100%;
+    padding-right: 10px;
+    /*@include background(
+      $img: url(../img/maracake.jpg),
+      );*/ }
+    .news-page__img img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      padding-top: 25px; }
+  .news-page__title {
+    border-bottom: 2px solid #B08323;
+    padding-bottom: 3px; }
+  .news-page__content {
+    margin-top: 15px; }
+  .news-page__date, .news-page__title, .news-page__content {
+    width: 70%; }
+
+@media screen and (min-width: 768px) {
+  .news-page__img img {
+    width: 150px;
+    height: 150px;
+    padding-top: 0; }
+  .news-page__content p {
+    font-size: 1.6rem; } }

@@ -1,0 +1,619 @@
+@charset "UTF-8";
+/*@use "mixin" as *; 非対応*/
+/* CSS Document */
+/* CSS Document */
+/*index.htmlここまで*/
+/*menu.html*/
+/*menu.htmlここまで*/
+/*news.html*/
+/*news.htmlここまで*/
+html {
+  font-family: 'Kaisei Tokumin', serif;
+  font-size: 62.5%;
+  height: auto; }
+
+body {
+  font-size: 1.6em;
+  width: 100%;
+  padding: 0;
+  background-color: #B0AA9E; }
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #4D390F; }
+
+p {
+  font-size: 1.4rem; }
+
+.radius {
+  border-radius: 10px; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+body, h1, h2, p, ul {
+  margin: 0; }
+
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0; }
+
+#about, #news, #info, #img {
+  padding-top: 50px; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh; }
+  .header__area {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .header nav {
+    display: none; }
+  .header .logo {
+    position: absolute;
+    width: 70px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*img {
+      margin: 0;
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      width: 100%;
+      height: 100%;
+    }*/ }
+    .header .logo h1 {
+      position: absolute;
+      width: 200px;
+      text-align: center;
+      font-size: 0.6rem;
+      font-weight: 300;
+      color: #B08323;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .header .logo a {
+      display: block;
+      width: 70px;
+      height: 60px;
+      background-image: url(../img/SVG/logo.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain; }
+
+.swiper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 0; }
+  .swiper-slide {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    border-radius: 20px; }
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.2);
+      transition: transform 1.7s ease 0.2s; }
+    .swiper-slide h2 {
+      width: 400px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      position: absolute;
+      color: #4D390F;
+      background-color: rgba(255, 255, 255, 0.5);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      font-size: 2rem;
+      font-weight: 600; }
+    .swiper-slide p {
+      position: absolute;
+      height: auto;
+      font-size: 1.4rem;
+      padding: 5px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      top: 50%;
+      right: 5%;
+      z-index: 2; }
+      .swiper-slide p.line-1 {
+        top: calc(50% + 5% * 1); }
+      .swiper-slide p.line-2 {
+        top: calc(50% + 5% * 2); }
+      .swiper-slide p.line-3 {
+        top: calc(50% + 5% * 3); }
+      .swiper-slide p.line-4 {
+        top: calc(50% + 5% * 4); }
+    .swiper-slide-active img {
+      transform: none; }
+
+/*スマホ用ナビエリア*/
+body.noScroll {
+  overflow: hidden; }
+
+.humburger {
+  position: absolute;
+  border-radius: 5px;
+  top: 20px;
+  right: 5%;
+  width: 30px;
+  height: 30px;
+  background-color: #B08323;
+  cursor: pointer;
+  z-index: 2; }
+  .humburger.inview {
+    z-index: 10; }
+  .humburger .menu-border {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 17.5px;
+    margin: 6.25px 0; }
+    .humburger .menu-border__item {
+      display: block;
+      width: 20px;
+      height: 2.5px;
+      background-color: #4D390F; }
+
+.nav-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: -1; }
+  .nav-area.inview {
+    opacity: 1;
+    z-index: 2; }
+    .nav-area.inview .nav-area__main .menu-list__item {
+      transform: none; }
+  .nav-area__logo {
+    width: 70px;
+    height: 60px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  .nav-area__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 500px;
+    margin: 20px auto 0;
+    background-color: #B08323; }
+    .nav-area__main .menu-list {
+      margin-top: 30px;
+      list-style-type: none;
+      padding-left: 0;
+      padding-top: 30px;
+      perspective: 2000px;
+      transform-style: preserve-3d; }
+      .nav-area__main .menu-list__item {
+        display: block;
+        margin-bottom: 20px;
+        transform: translate3d(0, 0, -1000px);
+        transition: all 0.3s; }
+        .nav-area__main .menu-list__item:nth-child(1) {
+          transition-delay: 0.04s; }
+        .nav-area__main .menu-list__item:nth-child(2) {
+          transition-delay: 0.08s; }
+        .nav-area__main .menu-list__item:nth-child(3) {
+          transition-delay: 0.12s; }
+        .nav-area__main .menu-list__item:nth-child(4) {
+          transition-delay: 0.16s; }
+        .nav-area__main .menu-list__item h2 {
+          text-align: center;
+          border-bottom: solid 1px black; }
+        .nav-area__main .menu-list__item p {
+          text-align: center; }
+
+/*スマホ用ナビエリア*/
+#main {
+  width: 100%;
+  margin: 0 auto; }
+
+/*イメージ画像エリアstart*/
+.img {
+  position: relative; }
+  .img__text {
+    width: 170px;
+    height: 50px;
+    margin: 40px auto 0;
+    background-color: #B08323;
+    border-radius: 50px;
+    bottom: -20px;
+    left: 50%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); }
+    .img__text:hover {
+      transform: translate(1px, 1px);
+      box-shadow: none; }
+    .img__text p {
+      font-weight: 700;
+      text-align: center;
+      align-items: center;
+      line-height: 50px;
+      text-decoration: none;
+      color: #000; }
+
+.img-area {
+  background-color: #988E79;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px; }
+  .img-area__top {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto; }
+  .img-area__wrap {
+    position: relative;
+    margin: 10px;
+    overflow: hidden; }
+    .img-area__wrap img {
+      width: 100%;
+      top: 0;
+      left: 0; }
+    .img-area__wrap-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.7s ease; }
+      .img-area__wrap-text:hover {
+        opacity: 1; }
+        .img-area__wrap-text:hover p {
+          opacity: 1;
+          transform: translate(-50%, -50%); }
+          .img-area__wrap-text:hover p:nth-child(2) {
+            transform: translate(-50%, calc(-50% + 20px)); }
+      .img-area__wrap-text p {
+        position: absolute;
+        text-align: center;
+        line-height: 20px;
+        font-weight: 600;
+        width: 95%;
+        height: 20px;
+        color: #B08323;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 20px));
+        transition: transform 0.5s ease .1s; }
+        .img-area__wrap-text p:first-child {
+          font-size: 2rem; }
+        .img-area__wrap-text p:nth-child(2) {
+          width: 70%;
+          transform: translate(-50%, calc(-50% + 40px)); }
+  .img-area__bottom {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto; }
+  .img-area__flex {
+    display: flex;
+    justify-content: space-between; }
+
+/*イメージ画像エリアend*/
+/*お店についてstart*/
+.about {
+  margin: 0 auto;
+  width: 80%; }
+  .about__text {
+    text-align: center; }
+  .about__item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-top: 85px; }
+    .about__item:first-child {
+      margin-top: 0; }
+    .about__item h2 {
+      display: block;
+      margin: 0 10px 35px; }
+    .about__item p {
+      display: block;
+      width: 80%;
+      align-self: center; }
+    .about__item .about-img {
+      width: 150px;
+      height: 100px;
+      margin-top: 35px; }
+      .about__item .about-img#flour {
+        background-image: url(../img/about1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+      .about__item .about-img#natural-yeast {
+        background-image: url(../img/about2.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+      .about__item .about-img#fermentation {
+        background-image: url(../img/about3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+      .about__item .about-img#food {
+        background-image: url(../img/about4.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+    .about__item.left {
+      border-left: 3px solid #B08323; }
+      .about__item.left h2 {
+        align-self: flex-start; }
+      .about__item.left .about-img {
+        align-self: flex-end; }
+    .about__item.right {
+      border-right: 3px solid #B08323; }
+      .about__item.right h2 {
+        align-self: flex-end; }
+      .about__item.right .about-img {
+        align-self: flex-start; }
+
+/*お店についてend*/
+/*newsエリア*/
+.news {
+  margin: 0px auto;
+  width: 80%; }
+  .news__text {
+    text-align: center; }
+  .news__area {
+    margin-top: 30px; }
+  .news__list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px; }
+    .news__list:last-child {
+      margin-bottom: 0; }
+  .news__list {
+    border-bottom: 1px solid black; }
+  .news__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px; }
+    .news__item time {
+      font-size: 1.4rem;
+      font-weight: 700; }
+    .news__item p {
+      width: 60%; }
+
+/*newsエリア*/
+/*店舗情報エリア*/
+.access {
+  margin: 0 auto 100px;
+  width: 75%; }
+  .access__text {
+    text-align: center; }
+  .access__area {
+    margin-top: 30px; }
+  .access__list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px; }
+    .access__list:last-child {
+      margin-bottom: 0; }
+  .access__flex {
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  .access__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; }
+  .access__item {
+    display: flex;
+    justify-content: start; }
+    .access__item p {
+      font-size: 1.6rem; }
+      .access__item p:first-child {
+        width: 40%;
+        margin-right: 10px;
+        font-weight: 700;
+        text-align: center;
+        align-self: center; }
+      .access__item p:last-child {
+        font-size: 1.2rem; }
+    .access__item.shop-name {
+      display: block;
+      align-self: center; }
+    .access__item.uber-icon {
+      display: block;
+      text-align: center;
+      align-self: center; }
+      .access__item.uber-icon a {
+        display: block;
+        width: 150px;
+        height: 75px;
+        background-image: url(../img/SVG/uber_logo.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover; }
+  .access__map {
+    margin: 0 auto;
+    margin-top: 35px; }
+    .access__map .google-map {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px; }
+
+.calendar tabele {
+  border-spacing: 0;
+  border-collapse: collapse; }
+.calendar td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center; }
+  .calendar td:first-child {
+    color: red; }
+  .calendar td:last-child {
+    color: royalblue; }
+
+/*店舗情報エリアここまで*/
+/*フッター*/
+.footer__area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  background-color: #B08323;
+  border-radius: 10px 10px 0 0; }
+.footer__logo {
+  width: 70px;
+  height: 60px;
+  margin: 10px auto 0;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+.footer__text {
+  text-align: center; }
+
+/*フッターここまで*/
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 1.6rem; }
+
+  h2 {
+    font-size: 2.2rem; }
+
+  #about, #news, #info, #img {
+    padding-top: 100px; }
+
+  .header__area {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5; }
+  .header nav {
+    order: 2;
+    display: block;
+    width: 600px; }
+    .header nav .menu-list {
+      padding-left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 10%;
+      list-style-type: none; }
+      .header nav .menu-list__item a {
+        text-align: center; }
+        .header nav .menu-list__item a h2 {
+          font-size: 1.6rem; }
+        .header nav .menu-list__item a h2, .header nav .menu-list__item a p {
+          color: #fff; }
+  .header .logo {
+    position: static;
+    align-self: center;
+    width: 70px;
+    height: 60px;
+    margin-left: 5%;
+    background: none;
+    transform: none; }
+    .header .logo h1 {
+      top: 5px;
+      left: 100px; }
+
+  .swiper-slide h2 {
+    font-size: 2.4rem; }
+  .swiper-slide p {
+    font-size: 1.6rem; }
+
+  /*スマホ用ナビエリア*/
+  .humburger {
+    display: none; }
+
+  .nav-area {
+    display: none; }
+
+  /*スマホ用ナビエリア*/
+  #main {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto; }
+
+  /*イメージ画像エリアstart*/
+  .img-area {
+    display: flex;
+    flex-direction: row; }
+
+  /*イメージ画像エリアend*/
+  /*お店についてstart*/
+  .about {
+    width: 75%; }
+    .about__item {
+      margin-top: 100px; }
+      .about__item p {
+        font-size: 1.6rem; }
+      .about__item .about-img {
+        width: 300px;
+        height: 200px; }
+
+  /*お店についてend*/
+  /*newsエリア*/
+  .news__area {
+    width: 75%;
+    margin: 50px auto 0; }
+
+  /*newsエリア*/
+  /*店舗情報エリア*/
+  .access {
+    width: 100%; }
+    .access__flex {
+      display: flex; }
+    .access__area {
+      margin-top: 50px;
+      width: 60%; }
+    .access__list {
+      height: 400px; }
+    .access__item p {
+      font-size: 2rem; }
+      .access__item p:last-child {
+        font-size: 1.6rem; }
+    .access__map {
+      width: 75%; }
+      .access__map .google-map {
+        height: 300px; }
+
+  .wrapper {
+    width: 40%;
+    margin: 50px auto; }
+
+  /*店舗情報エリアここまで*/ }

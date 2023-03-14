@@ -1,0 +1,97 @@
+/* CSS Document */
+$main-color: #B08323;
+$base-color: #B0AA9E;
+$text-color: #4D390F;
+$bg-color: #988E79;
+$alpha-black: rgba(0,0,0,0.5);
+$alpha-white: rgba(255,255,255,0.5);
+
+@mixin defaultStyle(){
+  html {
+    font-family: 'Kaisei Tokumin', serif;
+    font-size: 62.5%;
+    height: auto;
+  }
+
+  body {
+    font-size: 1.6em;
+    width: 100%;
+    padding: 0;
+    background-color: $base-color;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: $text-color;
+  }
+  p{
+    font-size: 1.4rem;
+  }
+  .radius {
+    border-radius: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  body, h1, h2, p, ul{
+    margin: 0;
+  }
+
+  img{
+      vertical-align: top;
+      font-size: 0;
+      line-height: 0;
+  }
+  
+  #about, #news, #info, #img{
+  padding-top: 50px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
+@mixin background(
+  $img,
+  $repeat: no-repeat,
+  $position: center,
+  $size: cover,
+  ) {
+    background: {
+      image: $img;
+      repeat: $repeat;
+      position: $position;
+      size : $size;
+    }
+}
+
+@mixin mainStyle(
+  $width:80%,
+  $Margin: 0px auto,
+) {
+  margin: $Margin;
+  width: $width;
+  
+  &__text {
+    text-align: center;
+  }
+  
+  &__area {
+    margin-top: 30px;
+  }
+  
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
